@@ -1,0 +1,151 @@
+:root {
+    /* neutrals */
+    --bg: #ffffff;
+    --ink: #231f20;
+    --muted: #666666;
+    --label-ink: #666666;
+
+    /* features & lines */
+    --constellation-stroke: #adde8a;
+    --feature: #80d6f7;
+
+    /* objects */
+    --star-fill: #000000;
+    --galaxy-fill: #ec1c24;
+    --nebula-fill: #80cc28;
+    --cluster-fill: #fff200;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000000;
+        --ink: #a0dcdd;
+        --muted: #999999;
+        --label-ink: #aaaaaa;
+
+        --constellation-stroke: #446f25;
+        --feature: #0e5977;
+
+        --star-fill: #ffffff;
+        /* Keep object hues; tweak if desired */
+        --galaxy-fill: #d71d24;
+        --nebula-fill: #89ce3b;
+        --cluster-fill: #f2e70d;
+    }
+}
+.chart {
+    background: var(--bg);
+}
+.graticule {
+    fill: none;
+    stroke-width: 0.25;
+    stroke: var(--muted);
+}
+
+.border {
+    stroke: var(--muted);
+    stroke-width: 0.5;
+    fill: rgba(0, 0, 0, 0);
+}
+.tick {
+    stroke: var(--muted);
+    stroke-width: 0.25;
+}
+.tick-label {
+    font-size: 12px;
+    fill: var(--muted);
+    font-family: Verdana, Arial, sans-seri;
+}
+
+.star {
+    fill: var(--star-fill);
+    fill-opacity: 0.9;
+}
+.galaxy {
+    fill: var(--galaxy-fill);
+    fill-opacity: 0.9;
+    stroke-width: 0.32;
+    stroke: var(--ink);
+}
+.open-cluster {
+    fill: var(--cluster-fill);
+    stroke-width: 0.8;
+    stroke-linecap: round;
+    stroke: var(--ink);
+    stroke-opacity: 1;
+    stroke-dasharray: 0, 2.5;
+}
+.globular-cluster circle {
+    fill: var(--cluster-fill);
+    stroke-width: 0.32;
+    stroke: var(--ink);
+}
+.globular-cluster line {
+    stroke-width: 0.32;
+    stroke: var(--ink);
+}
+.planetary-nebula {
+    fill: var(--nebula-fill);
+    stroke-width: 0.32;
+    stroke: var(--ink);
+}
+.bright-nebula {
+    fill: var(--nebula-fill);
+    stroke-width: 0.32;
+    stroke: var(--ink);
+}
+
+.constellation {
+    fill: none;
+    stroke-width: 1.28;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke: var(--constellation-stroke);
+    stroke-opacity: 1;
+    stroke-miterlimit: 4;
+}
+.zenith {
+    fill: var(--feature);
+    stroke: var(--feature);
+}
+.zenith line {
+    stroke-width: 1.92;
+    stroke: var(--feature);
+}
+.ecliptic {
+    fill: none;
+    stroke-width: 1.92;
+    stroke: var(--feature);
+}
+
+.star-label {
+    font-size: 60%;
+    font-family: Verdana, Arial, sans-serif;
+    fill: var(--label-ink);
+}
+.object-label,
+.galaxy-label,
+.open-cluster-label,
+.globular-cluster-label,
+.planetary-nebula-label,
+.bright-nebula-label {
+    font-size: 55%;
+    font-family: Verdana, Arial, sans-serif;
+    fill: var(--label-ink);
+    pointer-events: none;
+    font-style: italic;
+}
+.constellation-label {
+    fill: rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 80%;
+    letter-spacing: 0.2em;
+    text-anchor: bottom;
+    dominant-baseline: top;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.legend .legend-label {
+    font: 11px sans-serif;
+    fill: var(--ink);
+    font-family: Verdana, Arial, sans-seri;
+}
