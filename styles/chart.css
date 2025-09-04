@@ -27,9 +27,9 @@
 
         --star-fill: #ffffff;
         /* Keep object hues; tweak if desired */
-        --galaxy-fill: #d71d24;
-        --nebula-fill: #89ce3b;
-        --cluster-fill: #f2e70d;
+        --galaxy-fill: #ac171d;
+        --nebula-fill: #6eaa2a;
+        --cluster-fill: #c2b90a;
     }
 }
 .chart {
@@ -135,7 +135,7 @@
     font-style: italic;
 }
 .constellation-label {
-    fill: rgba(0, 0, 0, 0.3);
+    fill: var(--muted);
     font-family: Verdana, Arial, sans-serif;
     font-size: 80%;
     letter-spacing: 0.2em;
