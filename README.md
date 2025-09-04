@@ -49,7 +49,7 @@ Positioning and projection:
 
 Astronomical drawing:
 - `--limit-star-mag <LIMIT_STAR_MAG>` Dimmest magnitude stars to draw (default `6.5`)
-- `--limit-object-mag <LIMIT_OBJECT_MAG>` Dimmest magnitude objects to draw (default `11`)
+- `--limit-object-mag <LIMIT_OBJECT_MAG>` Dimmest magnitude objects to draw (default `10`)
 - `--object-scale <OBJECT_SCALE>` Scale multiplier for object symbol size relative to its physical size and/or magnitude (default `1.25`)
 - `--step-ra-deg <STEP_RA_DEG>` RA gridlines step in degrees (default `15`)
 - `--step-dec-deg <STEP_DEC_DEG>` Dec gridlines step in degrees (default `10`)

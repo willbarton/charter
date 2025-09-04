@@ -23,8 +23,8 @@ fn r_size(arcmin: f64, k: f64, alpha: f64, cap: f64) -> f64 {
 }
 
 fn radius(mag: f64, arcmin: Option<f64>, w_mag: f64, w_size: f64, floor: f64) -> f64 {
-    let by_mag = r_mag(mag, 4.0, 18.0, -1.0, 10.0);
-    let by_size = r_size(arcmin.unwrap_or(0.0), 1.2, 0.5, 16.0);
+    let by_mag = r_mag(mag, 3.0, 20.0, -1.0, 10.0);
+    let by_size = r_size(arcmin.unwrap_or(0.0), 1.2, 0.5, 20.0);
     (w_mag * by_mag + w_size * by_size).max(floor)
 }
 
@@ -105,7 +105,8 @@ impl Layer for ObjectsLayer {
                         );
                     }
                     "galaxy" => {
-                        let size = r_mag(o.magnitude, 4.0, 18.0, -1.0, 10.0) * scale;
+                        // let size = r_mag(o.magnitude, 4.0, 18.0, -1.0, 10.0) * scale;
+                        let size = radius(o.magnitude, Some(o.size.major), 1.0, 0.3, 2.0) * scale;
                         let rx = size * 0.7;
                         let ry = size * 0.35;
                         let gg = G::new()

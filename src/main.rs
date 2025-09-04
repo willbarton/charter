@@ -44,7 +44,7 @@ struct Args {
     limit_star_mag: f64,
 
     /// Dimmest magnitude objects to draw
-    #[arg(long, default_value_t = 11.0)]
+    #[arg(long, default_value_t = 10.0)]
     limit_object_mag: f64,
 
     /// Scale multiplier for object symbol size relative to its physical size and/or magnitude
